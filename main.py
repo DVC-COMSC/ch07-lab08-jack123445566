@@ -1,12 +1,14 @@
-numbers = [10, 15, 25, 30, 35]
+numbers = list(map(int, input(). split()))
+value = int(input("Enter a number: "))
 
-insval = int(input())
-
-for i in range(len(numbers)):
-    if numbers[i] > insval:
-        numbers.insert(i, insval)
-        break
-else:  
-    numbers.append(insval)
-
+numbers.insert(0, value)
+for i in range(len(numbers)-1):
+    if numbers[i] > numbers[i+1]:
+        numbers[i], numbers[i+1] = numbers[i+1], numbers[i]
 print(numbers)
+
+
+
+
+
+
